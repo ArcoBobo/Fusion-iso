@@ -29,28 +29,28 @@ echo
 	desktop="xfce"
 	lightdmDesktop="xfce"
 
-	arcolinuxVersion='v20.11.9'
+	arcoboboVersion=y$(date +%y).m$(date +%m).d$(date +%d)
 
-	isoLabel='arcolinux-'$arcolinuxVersion'-x86_64.iso'
+	isoLabel='arcobobo-'$desktop'-'$arcoboboVersion'-x86_64.iso'
 
 	# setting of the general parameters
-	buildFolder=$HOME"/arcolinux-build"
-	outFolder=$HOME"/ArcoLinux-Out"
+	buildFolder=$HOME"/arcobobo-build"
+	outFolder=$HOME"/ArcoBobo-Out"
 	archisoVersion=$(sudo pacman -Q archiso)
-	
-	echo "################################################################## "		
+
+	echo "################################################################## "
 	echo "Building the desktop                   : "$desktop
-	echo "Bulding version                        : "$arcolinuxVersion
+	echo "Bulding version                        : "$arcoboboVersion
 	echo "Iso label                              : "$isoLabel
 	echo "Do you have the right archiso version? : "$archisoVersion
 	echo "Build folder                           : "$buildFolder
 	echo "Out folder                             : "$outFolder
-	echo "################################################################## "		
+	echo "################################################################## "
 
 echo
 echo "################################################################## "
 tput setaf 2
-echo "Phase 2 :" 
+echo "Phase 2 :"
 echo "- Checking if archiso is installed"
 echo "- Saving current archiso version to readme"
 echo "- Making mkarchiso verbose"
@@ -172,18 +172,18 @@ echo
 	#Setting variables
 
 	#profiledef.sh
-	oldname1='iso_name=arcolinux'
-	newname1='iso_name=arcolinux'
+	oldname1='iso_name=arcobobo'
+	newname1='iso_name=arcobobo'
 
-	oldname2='iso_label="arcolinux'
-	newname2='iso_label="arcolinux'
+	oldname2='iso_label="arcobobo'
+	newname2='iso_label="arcobobo'
 
-	oldname3='ArcoLinux'
-	newname3='ArcoLinux'
+	oldname3='ArcoBobo'
+	newname3='ArcoBobo'
 
 	#hostname
-	oldname4='ArcoLinux'
-	newname4='ArcoLinux'
+	oldname4='ArcoBobo'
+	newname4='ArcoBobo'
 
 	#lightdm.conf user-session
 	oldname5='user-session=xfce'
@@ -265,7 +265,7 @@ echo
 
 	[ -d $outFolder ] || mkdir $outFolder
 	echo "Copying the iso to the out folder : "$outFolder
-	cp $buildFolder/archiso/out/arcolinux* $outFolder
+	cp $buildFolder/archiso/out/arco* $outFolder
 
 echo
 echo "###################################################################"
@@ -295,7 +295,7 @@ echo
 	echo "Moving pkglist.x86_64.txt"
 	echo "########################"
 	cp $buildFolder/archiso/work/iso/arch/pkglist.x86_64.txt  $outFolder/$isoLabel".pkglist.txt"
-	
+
 
 echo
 echo "##################################################################"
