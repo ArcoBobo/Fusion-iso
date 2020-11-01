@@ -40,7 +40,7 @@ echo
 
 	echo "################################################################## "
 	echo "Building the desktop                   : "$desktop
-	echo "Bulding version                        : "$arcoboboVersion
+	echo "Building version                        : "$arcoboboVersion
 	echo "Iso label                              : "$isoLabel
 	echo "Do you have the right archiso version? : "$archisoVersion
 	echo "Build folder                           : "$buildFolder
