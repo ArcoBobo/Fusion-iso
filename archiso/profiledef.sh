@@ -2,10 +2,10 @@
 # shellcheck disable=SC2034
 
 iso_name=arcobobo
-iso_label="arcobobo-v20.11.9"
+iso_label="arcobobo"y$(date +%y).m$(date +%m).d$(date +%d)
 iso_publisher="ArcoBobo"
 iso_application="ArcoBobo Live/Rescue CD"
-iso_version="v20.11.9"
+iso_version=y$(date +%y).m$(date +%m).d$(date +%d)
 install_dir=arch
 work_dir=work
 out_dir=out
