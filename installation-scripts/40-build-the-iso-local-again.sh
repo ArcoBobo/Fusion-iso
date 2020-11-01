@@ -252,7 +252,7 @@ echo "################################################################## "
 echo
 
 	cd $buildFolder/archiso/
-	sudo ./build.sh
+	sudo mkarchiso -v -w $buildFolder $buildFolder/archiso/
 
 echo
 echo "################################################################## "
@@ -294,7 +294,7 @@ echo
 	echo
 	echo "Moving pkglist.x86_64.txt"
 	echo "########################"
-	cp $buildFolder/archiso/work/iso/arch/pkglist.x86_64.txt  $outFolder/$isoLabel".iso.pkglist.txt"
+	cp $buildFolder/archiso/work/iso/arch/pkglist.x86_64.txt  $outFolder/$isoLabel".pkglist.txt"
 	
 
 #echo
