@@ -2,7 +2,7 @@
 # shellcheck disable=SC2034
 
 iso_name=arcobobo
-iso_label="arcobobo"y$(date +%y).m$(date +%m).d$(date +%d)
+#iso_label="arcobobo"y$(date +%y).m$(date +%m).d$(date +%d)
 iso_publisher="ArcoBobo"
 iso_application="ArcoBobo Live/Rescue CD"
 iso_version=y$(date +%y).m$(date +%m).d$(date +%d)
